@@ -1,18 +1,30 @@
 import 'package:bloc/bloc.dart';
 import 'counter_state.dart';
 
-class CounterCubit extends Cubit<int>{
+class CounterCubit extends Cubit<CounterState>{
 
-  CounterCubit() : super(0);
+  CounterCubit() : super(CounterInitialState());
 
 
 
+  int counter = 0 ;
   void increment(){
-    state + 1;
+    counter ++ ;
+    emit(IncrementState(obj: 'Bartase'));
   }
 
   void decrement(){
-    state - 1;
+    counter -- ;
+    emit(DecrementState(obj: 'Komtase'));
+  }
+
+  void navigate(){
+    if(counter < 10){
+      counter ++;
+    }else{
+      counter --;
+    }
+    emit(NewscreenState(obj: 'Notun page', count: counter));
   }
 
 }
