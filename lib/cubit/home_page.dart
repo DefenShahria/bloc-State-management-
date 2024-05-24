@@ -1,11 +1,12 @@
-import 'package:block_code/counter_cubit.dart';
-import 'package:block_code/counter_state.dart';
-import 'package:block_code/new_screen.dart';
+
+import 'package:block_code/cubit/counter_cubit.dart';
+import 'package:block_code/cubit/counter_state.dart';
+import 'package:block_code/cubit/new_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+class Cubit_Homepage extends StatelessWidget {
+  const Cubit_Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {

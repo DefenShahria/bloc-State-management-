@@ -1,7 +1,9 @@
+import 'package:block_code/bloc/counter_home.dart';
+import 'package:block_code/cubit/counter_cubit.dart';
+import 'package:block_code/cubit/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'counter_cubit.dart';
-import 'home_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       home:  BlocProvider(
           create: (context)=>CounterCubit(),
-      child: MyHomePage()),
+      child: Bloc_homepage()),
     );
   }
 }
