@@ -1,6 +1,10 @@
 part of 'counter_bloc.dart';
 
 @immutable
-sealed class CounterState {}
+abstract class CounterState {}
 
-final class CounterInitial extends CounterState {}
+class InitialState extends CounterState {}
+
+class IncrementState extends CounterState {}
+class DecrementState extends CounterState {}
+
